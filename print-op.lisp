@@ -9,7 +9,7 @@
 ;;;;;
 
 
-(in-package :cldoc)
+(in-package :lpr)
 
 (defparameter *enscript-executable* "enscript")
 
