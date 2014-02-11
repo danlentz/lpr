@@ -1,6 +1,8 @@
 ;;;;; -*- mode: lisp; syntax: common-lisp; coding: utf-8; base: 10; -*-
 
-(defsystem :lpr
+(in-package :CL-USER)
+
+(asdf:defsystem :lpr
   :serial t
   :depends-on (:uiop)
   :components
