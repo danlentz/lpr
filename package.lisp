@@ -1,8 +1,9 @@
 
+(in-package :CL-USER)
+
 (defpackage :lpr
   (:use common-lisp)
   (:export :print-op :print-system)
-  (:author "Dan Lentz <danlentz@gmail.com>")
   (:documentation "This package defines an ASDF operation to create a printout of a system's source code in
                    compilation order.  This operation makes use of the open-source utility 'enscript' which,
                    if not already present on your system, should be easily installable using your favorite
