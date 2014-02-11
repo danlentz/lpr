@@ -19,7 +19,6 @@ examples below:
 ```common-lisp
 (lpr:print-system :cl-utilities)
 
-(:lpr :hunchentoot)
 
 (lpr:print-system :alexandria :program "enscript" :indent 0 :nup 1 :ncol 1 :media "Letter" 
                               :heading-fontspec "Helvetica-BoldOblique@10"
