@@ -21,6 +21,11 @@ examples below:
 
 (:lpr :hunchentoot)
 
+(lpr:print-system :alexandria :program "enscript" :indent 0 :nup 1 :ncol 1 :media "Letter" 
+                              :heading-fontspec "Helvetica-BoldOblique@10"
+                              :body-fontspec "Courier-New@9")
+
+
 (asdf:operate (make-instance 'lpr:print-op 
                  :program "/path/to/enscript"
                  :indent  0
