@@ -83,16 +83,25 @@
       (slot-value o 'body-fontspec)
       (asdf:component-pathname c))))
       
-(defun print-system (system)
+(defun print-system (system-designator &key (program *enscript-executable*) (indent 0) (nup 2) (ncol 2)
+                                 (media "Letter") (heading-fontspec "Helvetica-BoldOblique@10")
+                                 (body-fontspec "Courier-New@9"))
   (let ((asdf:*asdf-verbose* t))
-    (asdf:operate 'print-op (asdf:find-system system)))
-  (values))
+    (asdf:operate (make-instance 'lpr:print-op 
+                     :program program
+                     :indent  indent
+                     :nup     nup
+                     :ncol    ncol
+                     :media   media
+                     :heading-fontspec heading-fontspec 
+                     :body-fontspec body-fontspec)
+                  (asdf:find-system system-designator))
+  (values)))
 
 (import '(lpr:print-op lpr:print-system) :cl-user)
 
-(defun :lpr (system-designator)
-  (print-system system-designator))
+;;(defun :lpr (system-designator)
+;;  (print-system system-designator))
 
 ;; (print-system :example)
-
 
