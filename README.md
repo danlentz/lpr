@@ -16,7 +16,7 @@ the fully qualified pathname may be specified in the source file 'print-op.lisp'
 One may generate a hardcopy printout of an ASDF system by invocation similar to one of the
 examples below:
 
-```
+```common-lisp
 (lpr:print-system :cl-utilities)
 
 (:lpr :hunchentoot)
